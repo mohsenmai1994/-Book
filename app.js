@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const zoomVal = $('zoomVal');
   const status = $('status');
 
-  const PDF_URL = './pdf/book.pdf';
+  const PDF_URL = './book.pdf';
 
   pdfjsLib.GlobalWorkerOptions.workerSrc =
     'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js';
