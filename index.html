@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>ریاضیات پنهان معامله‌گری</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./styles.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+
+<body>
+  <div class="reader">
+    <header class="readerTop">
+      <div class="bookInfo">
+        <div class="bookTitle">آنچه درباره معامله‌گری به شما نمی‌گویند</div>
+        <div class="bookMeta">
+          صفحه
+          <span id="pageNum">—</span>
+          از
+          <span id="pageCount">—</span>
+        </div>
+      </div>
+
+      <button class="topBtn" id="btnFull" type="button" title="تمام‌صفحه">
+        تمام‌صفحه
+      </button>
+    </header>
+
+    <main class="readerBody" id="readerBody">
+      <div class="paperWrap" id="paperWrap">
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <div class="loadingText" id="loadingText">در حال بارگذاری…</div>
+          <div class="progress">
+            <div class="progressFill" id="barFill"></div>
+          </div>
+        </div>
+
+        <div class="pdfMount" id="pdfMount"></div>
+      </div>
+    </main>
+
+    <footer class="readerControls">
+      <div class="controlRow">
+        <button class="ctrlBtn" id="btnNext" type="button">بعدی</button>
+
+        <input id="seek" class="seek" type="range" min="1" max="1" value="1" />
+
+        <button class="ctrlBtn" id="btnPrev" type="button">قبلی</button>
+      </div>
+
+      <div class="controlRow compact">
+        <button class="miniBtn" id="btnZoomOut" type="button">−</button>
+
+        <button class="miniBtn wide" id="btnFit" type="button">
+          فیت عرض
+        </button>
+
+        <div class="zoomBadge">
+          <span id="zoomVal">100</span>%
+        </div>
+
+        <button class="miniBtn" id="btnZoomIn" type="button">+</button>
+      </div>
+    </footer>
+
+    <div class="toast" id="status">آماده</div>
+  </div>
+</body>
+</html>
